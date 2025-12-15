@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Amir Reza Shafiei</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-glass">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">ARS Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projets-principaux">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#mini-projets">Exercices</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#apropos">À Propos</a></li> <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><button id="toggle-theme" class="btn btn-sm btn-outline-light ms-3 rounded-circle">🌙</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="container d-flex align-items-center min-vh-100 reveal">
+            <div class="row align-items-center w-100">
+                <div class="col-md-6 order-2 order-md-1">
+                    <h1 class="display-3 fw-bold mb-3">Bonjour, je suis <span class="text-gradient">Amir Reza Shafiei</span></h1>
+                    <p class="lead mb-4">Développeur Web Junior créatif, spécialisé dans les interfaces modernes.</p>
+                    <div class="d-flex gap-3">
+                        <a href="cv.pdf" class="btn btn-neon btn-lg" download>Télécharger CV</a>
+                        <a href="#contact" class="btn btn-outline-secondary btn-lg">Me Contacter</a>
+                    </div>
+                </div>
+                <div class="col-md-6 order-1 order-md-2 text-center mb-4 mb-md-0">
+                    <img src="images/AVATAR.jpg" alt="Avatar" class="img-fluid rounded-circle shadow-lg hover-card" style="max-width: 350px;">
+                </div>
+            </div>
+        </section>
+
+        <section id="projets-principaux" class="py-5 reveal">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold"><span class="text-gradient">Projets Principaux</span></h2>
+        
+        <div class="card hover-card mb-5 shadow-sm">
+    <div class="row g-0">
+        <div class="col-md-6">
+            <img src="images/projetHTML.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="Projet 1">
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+            <div class="card-body p-4">
+                <h3 class="card-title fw-bold">Projet de cours 1</h3>
+                <p class="card-text text-muted">Technologies: HTML, CSS</p>
+                <p class="card-text">Premier projet d'évaluation réalisé entièrement en HTML5 et CSS3 natif. L'objectif était de concevoir un site multipage sur un thème libre, en mettant l'accent sur la structure sémantique et le Responsive Design. J'y ai notamment implémenté un menu hamburger fonctionnel pour mobile sans l'aide de frameworks.</p>
+                
+                <div class="d-flex gap-2 mt-3">
+                    <button class="btn btn-neon" data-bs-toggle="modal" data-bs-target="#modalProjet1">Voir Détails</button>
+                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/main" target="_blank" class="btn btn-outline-light">Code GitHub 🐙</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card hover-card mb-5 shadow-sm">
+    <div class="row g-0">
+        <div class="col-md-6 order-md-2">
+            <img src="images/projetJS.jpg" class="img-fluid rounded-end h-100 object-fit-cover" alt="Projet 2">
+        </div>
+        <div class="col-md-6 order-md-1 d-flex align-items-center">
+            <div class="card-body p-4 text-md-end">
+                <h3 class="card-title fw-bold">Projet de cours 2</h3>
+                <p class="card-text text-muted">Technologies: JavaScript,HTML5,CSS3</p>
+                <p class="card-text">Ce projet d'évaluation en développement web illustre la maîtrise des fondamentaux du JavaScript à travers trois exercices interactifs : un vérificateur d'années bissextiles intégrant une validation par expressions régulières , un formulaire de contact structuré autour de la création d'objets et de méthodes , et un gestionnaire de liste dynamique assurant la persistance des données via le LocalStorage. L'application respecte une architecture modulaire stricte (fichiers HTML, CSS et JS séparés)  et propose une interface responsive et moderne grâce à l'intégration de Bootstrap</p>
+                
+                <div class="d-flex gap-2 mt-3 justify-content-md-end">
+                    <button class="btn btn-neon" data-bs-toggle="modal" data-bs-target="#modalProjet2">Voir Détails</button>
+                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/JAVASCRIPT-AMIRREZA-SHAFIEI" target="_blank" class="btn btn-outline-light">Code GitHub 🐙</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card hover-card mb-5 shadow-sm">
+    <div class="row g-0">
+        <div class="col-md-6">
+            <div class="d-flex align-items-center justify-content-center bg-dark text-white h-100" style="min-height: 300px;">
+                <h3>Mon Portfolio</h3>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+            <div class="card-body p-4">
+                <h3 class="card-title fw-bold">Mon Portfolio 2025</h3>
+                <p class="card-text text-muted">Technologies: Bootstrap 5, JS</p>
+                <p class="card-text">Le site actuel.</p>
+                
+                <div class="d-flex gap-2 mt-3">
+                    <button disabled class="btn btn-neon">Vous y êtes !</button>
+                    <a href="https://github.com/VOTRE-NOM/Mon-Portfolio" target="_blank" class="btn btn-outline-light">Code GitHub 🐙</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+        <section id="mini-projets" class="bg-light py-5 reveal">
+            <div class="container">
+                <h3 class="text-center mb-5">Mini Projets (Exercices Académiques)</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 hover-card shadow-sm border-0">
+                            <img src="images/projet1.jpg" class="card-img-top" alt="Color Changer">
+                            <div class="card-body">
+                                <h5>Changeur de Couleur</h5>
+                                <p class="small text-muted">DOM & Events</p>
+                                <button class="btn btn-sm btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalProjet1">Voir Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 hover-card shadow-sm border-0">
+                            <img src="images/projet2.jpg" class="card-img-top" alt="Counter">
+                            <div class="card-body">
+                                <h5>Compteur de Clics</h5>
+                                <p class="small text-muted">Logique JS</p>
+                                <button class="btn btn-sm btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalProjet2">Voir Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 hover-card shadow-sm border-0">
+                            <img src="images/projet3.jpg" class="card-img-top" alt="Profile Card">
+                            <div class="card-body">
+                                <h5>Carte Profil</h5>
+                                <p class="small text-muted">Integration Bootstrap</p>
+                                <button class="btn btn-sm btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalProjet3">Voir Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="apropos" class="container py-5 reveal">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4 fw-bold"><span class="text-gradient">À propos de moi</span></h2>
+                    <p class="lead">Étudiant Informatique-DANT à Sorbonne Université.</p>
+                    <p class="text-muted">
+                        J'ai commencé mon parcours par l'apprentissage des bases du web (HTML/CSS) 
+                        et je me spécialise aujourd'hui dans la création d'interfaces dynamiques. 
+                        J'aime résoudre des problèmes et créer des expériences utilisateurs fluides.
+                    </p>
+                    <ul class="list-inline mt-4 p-3 bg-light rounded-4 shadow-sm d-inline-block">
+                        <li class="list-inline-item mx-3"><strong>🎓 Formation :</strong> Sorbonne Université</li>
+                        <li class="list-inline-item mx-3"><strong>💼 Expérience/LANGS :</strong> Projets académiques/French, English, Persian</li>
+                        <li class="list-inline-item mx-3"><strong>⚽ Intérêts :</strong> Tech, Sport, Design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences" class="container py-5 reveal">
+            <h2 class="text-center mb-5 fw-bold">Stack Technique</h2>
+            <div class="row text-center">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white">
+                        <div class="display-4 mb-2">🚀</div>
+                        <h5 class="fw-bold">HTML5</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white">
+                        <div class="display-4 mb-2">🎨</div>
+                        <h5 class="fw-bold">CSS3</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white">
+                        <div class="display-4 mb-2">🤖</div>
+                        <h5 class="fw-bold">Bootstrap</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white">
+                        <div class="display-4 mb-2">⚡</div>
+                        <h5 class="fw-bold">JavaScript</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container py-5 mb-5 reveal">
+            <div class="card border-0 shadow-lg overflow-hidden rounded-5">
+                <div class="row g-0">
+                    <div class="col-lg-5 bg-dark text-white p-5 d-flex flex-column justify-content-center align-items-center text-center">
+                        <h3>Discutons !</h3>
+                        <p>N'hésitez pas à me contacter pour toute opportunité.</p>
+                        <div class="mt-4 d-grid gap-3 w-100">
+                            <a href="https://github.com/amirreza-shafiei10" target="_blank" class="btn btn-outline-light btn-lg">GitHub 🐙</a>
+                            <a href="https://www.linkedin.com/in/amir-reza-shafiei-675654396/" target="_blank" class="btn btn-outline-light btn-lg">LinkedIn 💼</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-5 bg-white">
+                        <h3 class="mb-4">Envoyer un message</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg bg-light border-0" id="nom" placeholder="Votre Nom" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-lg bg-light border-0" id="email" placeholder="Votre Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control form-control-lg bg-light border-0" id="message" rows="4" placeholder="Votre Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-neon w-100 btn-lg">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Amir Reza Shafiei. Designed with ❤️ & Bootstrap.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalProjet1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Détails : Couleur Magique 🎨</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Technologies :</strong> HTML5, CSS3,</p>
+                <p><strong>Date :</strong> Octobre 2025</p>
+                <p>A HTML, CSS EVALUATION</p>
+                <hr>
+                <a href=https://github.com/amirreza-shafiei10/Mes-Exercices-Web/blob/main/color.html/color.html target="_blank" class="btn btn-dark w-100">
+                    Voir le code sur GitHub 🐙
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalProjet2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Détails : Compteur de Clics 👆</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Technologies :</strong> JS (Variables), Bootstrap, CSS3, HTML5</p>
+                <p><strong>Date :</strong> DECEMBRE 2025</p>
+                <p>projet JS</p>
+                <hr>
+                <a href=https://github.com/amirreza-shafiei10/Mes-Exercices-Web/blob/main/counter.html/counter.html target="_blank" class="btn btn-dark w-100">
+                    Voir le code sur GitHub 🐙
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalProjet3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Détails : Carte Profil 👤</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Technologies :</strong> Bootstrap 5 Grid</p>
+                <p><strong>Date :</strong> Septembre 2025</p>
+                <p>Mise en page 100% responsive utilisant le système de grille.</p>
+                <hr>
+                <a href=https://github.com/amirreza-shafiei10/Mes-Exercices-Web/blob/main/cv_card.html/cv_card.html target="_blank" class="btn btn-dark w-100">
+                    Voir le code sur GitHub 🐙
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>

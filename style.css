@@ -1,0 +1,154 @@
+/* --- GLOBAL VARIABLES --- */
+:root {
+    --neon-blue: #00f3ff;
+    --neon-purple: #bc13fe;
+    --glass-bg: rgba(20, 20, 20, 0.7);
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+}
+
+/* --- BASE STYLES --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Smooth Scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- 1. GLASSMORPHISM NAVBAR --- */
+.navbar-glass {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(15px); /* The "Frosted" effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* --- 2. ANIMATED GRADIENT TEXT --- */
+.text-gradient {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), #ff0055);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- 3. NEON GLOWING BUTTONS --- */
+.btn-neon {
+    background-color: transparent;
+    border: 2px solid var(--neon-blue);
+    color: var(--neon-blue);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.btn-neon:hover {
+    color: white;
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue), 0 0 40px var(--neon-blue); /* The Glow */
+    border-color: var(--neon-blue);
+    transform: scale(1.05);
+}
+
+/* --- 4. LEVITATING CARDS --- */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px); /* Moves up */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Hero Image Border */
+#accueil img {
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, var(--neon-blue), var(--neon-purple)) border-box;
+    /* This creates a gradient border */
+}
+
+/* --- 5. SCROLL REVEAL ANIMATION (Initial State) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- DARK MODE ADJUSTMENTS --- */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: #f1f1f1;
+}
+
+/* 1. Fix Sections that use bg-light (Like Mini-Projects) */
+body.dark-mode .bg-light {
+    background-color: #1a1a1a !important;
+    color: #f1f1f1 !important;
+}
+
+/* 2. Fix Cards that use bg-white (Like Skills & Contact form) */
+/* This prevents "White Text on White Background" */
+body.dark-mode .bg-white, 
+body.dark-mode .card {
+    background-color: var(--card-bg) !important;
+    color: #f1f1f1 !important;
+}
+
+/* 3. Fix "Grey Text" (text-muted) to be lighter */
+body.dark-mode .text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* 4. Fix Contact Form Inputs */
+/* Makes the input dark and the typed text/placeholder light */
+body.dark-mode .form-control {
+    background-color: #333 !important;
+    color: #fff !important;
+    border-color: #555;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #aaa !important;
+}
+
+/* 5. Fix Modals (The Pop-ups) */
+body.dark-mode .modal-content {
+    background-color: var(--card-bg);
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .modal-header {
+    border-bottom-color: #444;
+}
+
+/* Make the "X" close button in modals white */
+body.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* 6. Fix Navbar Glass Effect in Dark Mode */
+body.dark-mode .navbar-glass {
+    background: rgba(0, 0, 0, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
