@@ -42,15 +42,19 @@ document.addEventListener("DOMContentLoaded", function() {
     revealOnScroll(); // Run once on load
 
 
-    // --- 3. FORM VALIDATION ---
+    // --- 3. FORM VALIDATION & SENDING (FORMSPREE) ---
     const form = document.getElementById('contactForm');
-    if (form) { // Only run if form exists
+    
+    if (form) {
         form.addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Stop page reload
+
+            // 1. Get Values
             let nom = document.getElementById('nom').value;
             let email = document.getElementById('email').value;
             let message = document.getElementById('message').value;
 
+            // 2. Validation Checks
             if (nom === "" || message === "") {
                 alert("Veuillez remplir tous les champs !");
                 return;
@@ -62,8 +66,30 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            alert("Message envoyé avec succès ! (Simulation)");
-            form.reset();
-        });
-    }
-});
+            // 3. SEND TO FORMSPREE (The Real Email Part)
+            // Replace the URL below with YOUR unique Formspree URL
+            const formspreeURL = "https://formspree.io/f/mjknqkgn";
+
+            const formData = new FormData(form);
+
+            fetch(formspreeURL, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert("Merci ! Votre message a bien été envoyé.");
+                    form.reset(); // Clear form
+                } else {
+                    alert("Oups ! Il y a eu un problème lors de l'envoi.");
+                }
+            }).catch(error => {
+                alert("Oups ! Il y a eu un problème lors de l'envoi.");
+            });
+        }); // Closes form.addEventListener
+    } 
+
+}); 
+          
