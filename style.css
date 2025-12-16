@@ -152,3 +152,22 @@ body.dark-mode .navbar-glass {
     background: rgba(0, 0, 0, 0.9) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* --- NEW PROJECT IMAGE STYLE --- */
+.project-img-custom {
+    height: 250px; /* Forces the image to be shorter */
+    width: 100%;   /* Keeps it filling the width */
+    object-fit: cover; /* Prevents stretching/distortion */
+    border: 3px solid var(--neon-blue); /* The Border */
+    border-radius: 10px;
+    margin: 10px; /* Adds space so the border doesn't touch the edge */
+}
+/* Fix for the Dark Button in Dark Mode */
+body.dark-mode .btn-outline-dark {
+    color: white;
+    border-color: white;
+}
+body.dark-mode .btn-outline-dark:hover {
+    background-color: white;
+    color: black;
+}
