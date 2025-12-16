@@ -36,9 +36,9 @@
             <div class="row align-items-center w-100">
                 <div class="col-md-6 order-2 order-md-1">
                     <h1 class="display-3 fw-bold mb-3">Bonjour, je suis <span class="text-gradient">Amir Reza Shafiei</span></h1>
-                    <p class="lead mb-4">Développeur Web Junior créatif, spécialisé dans les interfaces modernes.</p>
+                    <p class="lead mb-4">Développeur Web Junior créatif, Étudiant Informatique-DANT à Sorbonne Université.</p>
                     <div class="d-flex gap-3">
-                        <a href="cv.pdf" class="btn btn-neon btn-lg" download>Télécharger CV</a>
+                        <a href="cv.pdf" class="btn btn-neon btn-lg" target="_blank">Voir mon CV</a>
                         <a href="#contact" class="btn btn-outline-secondary btn-lg">Me Contacter</a>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
         <div class="card hover-card mb-5 shadow-sm">
     <div class="row g-0">
         <div class="col-md-6">
-            <img src="images/projetHTML.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="Projet 1">
+            <img src="images/projetHTML.jpg" class="img-fluid project-img-custom" alt="Projet 1">
         </div>
         <div class="col-md-6 d-flex align-items-center">
             <div class="card-body p-4">
@@ -65,7 +65,7 @@
                 
                 <div class="d-flex gap-2 mt-3">
                     <button class="btn btn-neon" data-bs-toggle="modal" data-bs-target="#modalProjet1">Voir Détails</button>
-                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/main" target="_blank" class="btn btn-outline-light">Code GitHub 🐙</a>
+                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/main" target="_blank" class="btn btn-outline-dark">Code GitHub 🐙</a>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
 <div class="card hover-card mb-5 shadow-sm">
     <div class="row g-0">
         <div class="col-md-6 order-md-2">
-            <img src="images/projetJS.jpg" class="img-fluid rounded-end h-100 object-fit-cover" alt="Projet 2">
+            <img src="images/projetJS.jpg" class="img-fluid project-img-custom" alt="Projet 2">
         </div>
         <div class="col-md-6 order-md-1 d-flex align-items-center">
             <div class="card-body p-4 text-md-end">
@@ -85,7 +85,7 @@
                 
                 <div class="d-flex gap-2 mt-3 justify-content-md-end">
                     <button class="btn btn-neon" data-bs-toggle="modal" data-bs-target="#modalProjet2">Voir Détails</button>
-                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/JAVASCRIPT-AMIRREZA-SHAFIEI" target="_blank" class="btn btn-outline-light">Code GitHub 🐙</a>
+                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/JAVASCRIPT-AMIRREZA-SHAFIEI" target="_blank" class="btn btn-outline-dark">Code GitHub 🐙</a>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
                 
                 <div class="d-flex gap-2 mt-3">
                     <button disabled class="btn btn-neon">Vous y êtes !</button>
-                    <a href="https://github.com/VOTRE-NOM/Mon-Portfolio" target="_blank" class="btn btn-outline-light">Code GitHub 🐙</a>
+                    <a href="https://github.com/amirreza-shafiei10/portfolio" target="_blank" class="btn btn-outline-dark">Code GitHub 🐙</a>
                 </div>
             </div>
         </div>
@@ -173,34 +173,51 @@
         </section>
 
         <section id="competences" class="container py-5 reveal">
-            <h2 class="text-center mb-5 fw-bold">Stack Technique</h2>
-            <div class="row text-center">
-                <div class="col-6 col-md-3 mb-4">
-                    <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white">
-                        <div class="display-4 mb-2">🚀</div>
-                        <h5 class="fw-bold">HTML5</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white">
-                        <div class="display-4 mb-2">🎨</div>
-                        <h5 class="fw-bold">CSS3</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white">
-                        <div class="display-4 mb-2">🤖</div>
-                        <h5 class="fw-bold">Bootstrap</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white">
-                        <div class="display-4 mb-2">⚡</div>
-                        <h5 class="fw-bold">JavaScript</h5>
-                    </div>
+    <h2 class="text-center mb-5 fw-bold">Stack Technique</h2>
+    <div class="row text-center">
+        
+        <div class="col-md-3 mb-4">
+            <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="60" class="mb-3">
+                <h5 class="fw-bold">HTML5</h5>
+                <div class="progress mt-3" style="height: 10px;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="60" class="mb-3">
+                <h5 class="fw-bold">CSS3</h5>
+                <div class="progress mt-3" style="height: 10px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="60" class="mb-3">
+                <h5 class="fw-bold">Bootstrap</h5>
+                <div class="progress mt-3" style="height: 10px;">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="p-4 border-0 shadow-sm rounded-4 hover-card bg-white h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" width="60" class="mb-3">
+                <h5 class="fw-bold">JavaScript</h5>
+                <div class="progress mt-3" style="height: 10px;">
+                    <div class="progress-bar bg-warning text-dark" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
         <section id="contact" class="container py-5 mb-5 reveal">
             <div class="card border-0 shadow-lg overflow-hidden rounded-5">
@@ -215,16 +232,20 @@
                     </div>
                     <div class="col-lg-7 p-5 bg-white">
                         <h3 class="mb-4">Envoyer un message</h3>
-                        <form id="contactForm">
+                        <form id="contactForm" action="https://formspree.io/f/mjknqkgn" method="POST">
+    
                             <div class="mb-3">
-                                <input type="text" class="form-control form-control-lg bg-light border-0" id="nom" placeholder="Votre Nom" required>
+                                <input type="text" name="name" class="form-control form-control-lg bg-light border-0" id="nom" placeholder="Votre Nom" required>
                             </div>
+    
                             <div class="mb-3">
-                                <input type="email" class="form-control form-control-lg bg-light border-0" id="email" placeholder="Votre Email" required>
+                                <input type="email" name="email" class="form-control form-control-lg bg-light border-0" id="email" placeholder="Votre Email" required>
                             </div>
+    
                             <div class="mb-3">
-                                <textarea class="form-control form-control-lg bg-light border-0" id="message" rows="4" placeholder="Votre Message" required></textarea>
-                            </div>
+                                <textarea name="message" class="form-control form-control-lg bg-light border-0" id="message" rows="4" placeholder="Votre Message" required></textarea>
+                             </div>
+    
                             <button type="submit" class="btn btn-neon w-100 btn-lg">Envoyer le message</button>
                         </form>
                     </div>
@@ -244,7 +265,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Détails : Couleur Magique 🎨</h5>
+                <h5 class="modal-title">Détails : Projet de cours 1</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -264,7 +285,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Détails : Compteur de Clics 👆</h5>
+                <h5 class="modal-title">Détails : projet de cours 2 👆</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
