@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-🔗 **[View Live →](https://your-live-url-here)** *(replace with your GitHub Pages or deployment URL)*
+🔗 **[View Live →](__https://amirreza-shafiei10.github.io/portfolio/__)** *(replace with your GitHub Pages or deployment URL)*
 
 ---
 
