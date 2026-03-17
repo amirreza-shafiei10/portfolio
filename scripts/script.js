@@ -38,47 +38,59 @@ document.addEventListener("DOMContentLoaded", function () {
     // ============================================================
     const typingEl = document.getElementById('typing-prefix');
     const phrases = {
-        fr: ['Développeur Web', 'Étudiant en Info', "Créateur d'Apps"],
-        en: ['Web Developer', 'CS Student', 'App Builder']
+        fr: ['Développeur Web', 'Étudiant L2 Info', 'Builder IA', 'App Creator'],
+        en: ['Web Developer', 'L2 CS Student', 'AI Builder', 'App Creator']
     };
 
-    let typingIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+    var typingIndex  = 0;
+    var charIndex    = 0;
+    var isDeleting   = false;
+
+    var SPEED_TYPE   = 90;   // ms per character when typing
+    var SPEED_DELETE = 45;   // ms per character when deleting
+    var PAUSE_AFTER  = 2000; // ms to display full word before deleting
+    var PAUSE_BEFORE = 450;  // ms to wait after deletion before next word
 
     function type() {
-        const list = phrases[currentLang];
-        const current = list[typingIndex];
+        var lang    = document.documentElement.lang || 'fr';
+        var list    = phrases[lang] || phrases['fr'];
+        var current = list[typingIndex];
+        var delay;
 
-        if (isDeleting) {
-            typingEl.textContent = current.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typingEl.textContent = current.substring(0, charIndex + 1);
+        if (!isDeleting) {
             charIndex++;
+            typingEl.textContent = current.substring(0, charIndex);
+            if (charIndex === current.length) {
+                // Full word typed — pause then start deleting
+                delay      = PAUSE_AFTER;
+                isDeleting = true;
+            } else {
+                delay = SPEED_TYPE;
+            }
+        } else {
+            charIndex--;
+            typingEl.textContent = current.substring(0, charIndex);
+            if (charIndex === 0) {
+                // Fully deleted — move to next word
+                isDeleting   = false;
+                typingIndex  = (typingIndex + 1) % list.length;
+                delay        = PAUSE_BEFORE;
+            } else {
+                delay = SPEED_DELETE;
+            }
         }
 
-        let speed = isDeleting ? 55 : 95;
-
-        if (!isDeleting && charIndex === current.length) {
-            speed = 1800;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            typingIndex = (typingIndex + 1) % list.length;
-            speed = 400;
-        }
-
-        typingTimeout = setTimeout(type, speed);
+        typingTimeout = setTimeout(type, delay);
     }
 
     function restartTyping() {
         clearTimeout(typingTimeout);
         typingIndex = 0;
-        charIndex = 0;
-        isDeleting = false;
+        charIndex   = 0;
+        isDeleting  = false;
         if (typingEl) typingEl.textContent = '';
-        type();
+        // Small initial delay so the first word doesn't snap in instantly
+        typingTimeout = setTimeout(type, PAUSE_BEFORE);
     }
 
     // ============================================================
@@ -87,6 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const langToggle = document.getElementById('toggle-lang');
 
     function applyLanguage(lang) {
+        // Set lang on <html> first — this is the single source of truth
+        document.documentElement.lang = lang;
+        localStorage.setItem('lang', lang);
+
         // Update all elements with data-fr / data-en
         document.querySelectorAll('[data-fr]').forEach(function (el) {
             el.innerHTML = el.getAttribute('data-' + lang);
@@ -97,16 +113,17 @@ document.addEventListener("DOMContentLoaded", function () {
             el.placeholder = el.getAttribute('data-placeholder-' + lang);
         });
 
-        document.documentElement.lang = lang;
+        // Toggle button always shows the OPPOSITE language (what you'll switch TO)
         langToggle.textContent = lang === 'fr' ? 'EN' : 'FR';
         currentLang = lang;
-        localStorage.setItem('lang', lang);
 
         restartTyping();
     }
 
+    // Read current lang from <html lang=""> — never from a stale closure variable
     langToggle.addEventListener('click', function () {
-        applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
+        var next = document.documentElement.lang === 'fr' ? 'en' : 'fr';
+        applyLanguage(next);
     });
 
     // Apply saved or default language on load
