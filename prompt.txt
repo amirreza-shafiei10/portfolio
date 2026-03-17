@@ -1,0 +1,86 @@
+Do a full redesign and fix all issues with this portfolio. Here's everything:
+
+LANGUAGE TOGGLE (FR/EN)
+
+- Add a FR | EN toggle button in the navbar
+
+- Every single text element in the page must have both French and English versions
+
+- Default language is French, toggle switches everything instantly without page reload
+
+- Save language preference to localStorage
+
+- Translate everything professionally including: hero text, about section, project descriptions, skills, contact form labels, footer
+
+CRITICAL FIXES
+
+- Add CalTrack as the first and most prominent project card in Main Projects with:
+
+  - Description: "AI-powered nutrition tracker with voice logging, macro tracking, weight progress charts, streak system and smart daily coaching"
+
+  - Live demo link: https://amirreza-shafiei10.github.io/calorie-tracker
+
+  - GitHub link: https://github.com/amirreza-shafiei10/calorie-tracker
+
+  - Tech tags: HTML, CSS, JavaScript, Gemini AI, Chart.js, Web Speech API
+
+- Fix the broken portfolio project card image (use projetPOR.jpg correctly)
+
+- Replace all skill progress bars with a clean modern badge/tag system
+
+- Expand skills to include: HTML5, CSS3, JavaScript, Bootstrap, Git & GitHub, REST APIs, Responsive Design, DOM Manipulation, LocalStorage, Python, Java, SQL, C
+
+- Replace all alert() popups in contact form with smooth inline feedback messages
+
+- Update footer copyright to 2026
+
+- Add loading="lazy" to all images
+
+- Add proper meta description and Open Graph tags for LinkedIn sharing
+
+DESIGN IMPROVEMENTS
+
+- Default to dark mode
+
+- Add a typing animation in the hero for the title (cycle through: "Web Developer", "CS Student", "App Builder")
+
+- Add a favicon (use a simple code bracket icon via emoji or SVG)
+
+- Replace progress bars with skill category groups: Frontend / Programming Languages / Tools & Other
+
+- Add live demo buttons to ALL projects that have GitHub Pages links
+
+- Project cards should show tech stack tags at the bottom
+
+- Add smooth scroll behavior
+
+- Add a "Back to top" button that appears when scrolling down
+
+- Make project modals show a proper description, tech stack, and links — no walls of text
+
+- Add subtle particle or mesh background animation to hero section
+
+NEW SECTION — ABOUT ME (expanded)
+
+- Rewrite the about section to sound more compelling for recruiters:
+
+  "L2 Computer Science student at Sorbonne Université, passionate about building real products with AI tools. I combine academic foundations with hands-on projects — from full-stack web apps to AI-integrated tools. Currently seeking an internship where I can contribute, learn fast, and build things that matter."
+
+- Add a timeline showing education history
+
+SEO & SOCIAL
+
+- Add meta description tag
+
+- Add Open Graph tags (og:title, og:description, og:image) so it looks good when shared on LinkedIn
+
+- Add Twitter card tags
+
+Make sure everything is mobile responsive and all existing functionality (dark/light mode toggle, contact form, animations) still works perfectly.
+
+- For the CalTrack project card, add a small "⚙️ Voice Logging — Coming Soon" badge or note under the tech stack tags
+
+- For the portfolio project card, instead of an image add a stylish animated banner that says something like "✦ You're currently viewing this project" with a subtle pulse animation — make it look intentional and creative, not like a missing image
+
+- The portfolio project card should have a "Live — You're here!" button instead of a demo link that does a smooth scroll back to the top of the page
+
