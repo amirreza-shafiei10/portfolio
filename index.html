@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Amir Reza Shafiei</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portfolio d'Amir Reza Shafiei — Développeur Web, Étudiant L2 Informatique-DANT à Sorbonne Université. Projets web, IA et applications interactives.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfolio — Amir Reza Shafiei">
+    <meta property="og:description" content="Développeur Web Junior & Étudiant à Sorbonne Université. Projets web, IA et applications interactives.">
+    <meta property="og:image" content="images/AVATAR.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio — Amir Reza Shafiei">
+    <meta name="twitter:description" content="Junior Web Developer & CS Student at Sorbonne Université. Check out my projects and skills.">
+    <meta name="twitter:image" content="images/AVATAR.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='75' font-family='monospace'>⟨/⟩</text></svg>">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-glass">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">ARS Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projets-principaux" data-fr="Projets" data-en="Projects">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#mini-projets" data-fr="Exercices" data-en="Exercises">Exercices</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#apropos" data-fr="À Propos" data-en="About">À Propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+                        <li class="nav-item ms-3">
+                            <button id="toggle-theme" class="btn btn-sm btn-outline-light rounded-circle">☀️</button>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <button id="toggle-lang" class="btn btn-sm btn-outline-info rounded-pill px-3">EN</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section id="accueil" class="position-relative d-flex align-items-center min-vh-100 reveal overflow-hidden">
+            <canvas id="particles-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
+            <div class="container position-relative" style="z-index:1;">
+                <div class="row align-items-center w-100">
+                    <div class="col-md-6 order-2 order-md-1">
+                        <h1 class="display-3 fw-bold mb-3">
+                            <span data-fr="Bonjour, je suis" data-en="Hello, I'm">Bonjour, je suis</span>
+                            <br><span class="text-gradient">Amir Reza Shafiei</span>
+                        </h1>
+                        <p class="lead mb-4">
+                            <span id="typing-prefix"></span><span id="typing-cursor">|</span>
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="CV.pdf" class="btn btn-neon btn-lg" target="_blank" data-fr="Voir mon CV" data-en="View my CV">Voir mon CV</a>
+                            <a href="#contact" class="btn btn-outline-secondary btn-lg" data-fr="Me Contacter" data-en="Contact Me">Me Contacter</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1 order-md-2 text-center mb-4 mb-md-0">
+                        <img src="images/AVATAR.jpg" alt="Avatar" class="img-fluid rounded-circle shadow-lg hover-card" style="max-width:350px;" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MAIN PROJECTS ===== -->
+        <section id="projets-principaux" class="py-5 reveal">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">
+                    <span class="text-gradient" data-fr="Projets Principaux" data-en="Main Projects">Projets Principaux</span>
+                </h2>
+
+                <!-- CALTRACK — FEATURED -->
+                <div class="card hover-card mb-5 shadow-lg featured-card">
+                    <div class="featured-badge" data-fr="⭐ Projet Phare" data-en="⭐ Featured Project">⭐ Projet Phare</div>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <div class="caltrack-banner d-flex align-items-center justify-content-center h-100" style="min-height:300px;">
+                                <div class="text-center position-relative" style="z-index:1;">
+                                    <div class="caltrack-icon mb-3">🥗</div>
+                                    <div class="fw-bold fs-4 text-gradient">CalTrack</div>
+                                    <div class="small text-muted mt-1">AI Nutrition Tracker</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="card-body p-4">
+                                <h3 class="card-title fw-bold">CalTrack</h3>
+                                <p class="card-text" data-fr="Suivi nutritionnel alimenté par l'IA avec journalisation vocale, suivi des macros, graphiques de progression du poids, système de séries et coaching quotidien intelligent." data-en="AI-powered nutrition tracker with voice logging, macro tracking, weight progress charts, streak system and smart daily coaching.">
+                                    Suivi nutritionnel alimenté par l'IA avec journalisation vocale, suivi des macros, graphiques de progression du poids, système de séries et coaching quotidien intelligent.
+                                </p>
+                                <div class="tech-tags mb-2">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag tech-tag-ai">Gemini AI</span>
+                                    <span class="tech-tag">Chart.js</span>
+                                    <span class="tech-tag">Web Speech API</span>
+                                </div>
+                                <div class="coming-soon-badge mb-3">⚙️ <span data-fr="Voice Logging — Bientôt disponible" data-en="Voice Logging — Coming Soon">Voice Logging — Bientôt disponible</span></div>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <a href="https://amirreza-shafiei10.github.io/calorie-tracker" target="_blank" class="btn btn-neon" data-fr="Démo Live 🚀" data-en="Live Demo 🚀">Démo Live 🚀</a>
+                                    <a href="https://github.com/amirreza-shafiei10/calorie-tracker" target="_blank" class="btn btn-outline-dark" data-fr="Code GitHub 🐙" data-en="GitHub Code 🐙">Code GitHub 🐙</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML/CSS PROJECT -->
+                <div class="card hover-card mb-5 shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="images/projetHTML.jpg" class="img-fluid project-img-custom" alt="Projet HTML/CSS" loading="lazy">
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="card-body p-4">
+                                <h3 class="card-title fw-bold" data-fr="Projet de cours 1" data-en="Course Project 1">Projet de cours 1</h3>
+                                <p class="card-text" data-fr="Premier projet d'évaluation en HTML5 et CSS3 natif. Site multipage avec structure sémantique, Responsive Design et menu hamburger fonctionnel pour mobile — sans frameworks." data-en="First evaluation project in native HTML5 and CSS3. Multipage site with semantic structure, responsive design, and a functional mobile hamburger menu — no frameworks.">
+                                    Premier projet d'évaluation en HTML5 et CSS3 natif. Site multipage avec structure sémantique, Responsive Design et menu hamburger fonctionnel pour mobile — sans frameworks.
+                                </p>
+                                <div class="tech-tags mb-3">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-neon" data-bs-toggle="modal" data-bs-target="#modalProjet1" data-fr="Voir Détails" data-en="View Details">Voir Détails</button>
+                                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/main" target="_blank" class="btn btn-outline-dark" data-fr="Code GitHub 🐙" data-en="GitHub Code 🐙">Code GitHub 🐙</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JS PROJECT -->
+                <div class="card hover-card mb-5 shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-6 order-md-2">
+                            <img src="images/projetJS.jpg" class="img-fluid project-img-custom" alt="Projet JavaScript" loading="lazy">
+                        </div>
+                        <div class="col-md-6 order-md-1 d-flex align-items-center">
+                            <div class="card-body p-4 text-md-end">
+                                <h3 class="card-title fw-bold" data-fr="Projet de cours 2" data-en="Course Project 2">Projet de cours 2</h3>
+                                <p class="card-text" data-fr="Trois exercices interactifs : vérificateur d'années bissextiles avec regex, formulaire de contact orienté objet, et gestionnaire de liste avec persistance LocalStorage. Architecture modulaire avec Bootstrap." data-en="Three interactive exercises: leap year validator with regex, object-oriented contact form, and dynamic list manager with LocalStorage persistence. Modular architecture with Bootstrap.">
+                                    Trois exercices interactifs : vérificateur d'années bissextiles avec regex, formulaire de contact orienté objet, et gestionnaire de liste avec persistance LocalStorage. Architecture modulaire avec Bootstrap.
+                                </p>
+                                <div class="tech-tags mb-3 justify-content-md-end">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">Bootstrap</span>
+                                </div>
+                                <div class="d-flex gap-2 justify-content-md-end">
+                                    <button class="btn btn-neon" data-bs-toggle="modal" data-bs-target="#modalProjet2" data-fr="Voir Détails" data-en="View Details">Voir Détails</button>
+                                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/JAVASCRIPT-AMIRREZA-SHAFIEI" target="_blank" class="btn btn-outline-dark" data-fr="Code GitHub 🐙" data-en="GitHub Code 🐙">Code GitHub 🐙</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTFOLIO PROJECT -->
+                <div class="card hover-card mb-5 shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <div class="portfolio-banner d-flex align-items-center justify-content-center h-100" style="min-height:300px;">
+                                <div class="text-center">
+                                    <div class="pulse-ring"></div>
+                                    <p class="portfolio-banner-text" data-fr="✦ Vous visualisez actuellement ce projet" data-en="✦ You're currently viewing this project">✦ Vous visualisez actuellement ce projet</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="card-body p-4">
+                                <h3 class="card-title fw-bold" data-fr="Mon Portfolio 2026" data-en="My Portfolio 2026">Mon Portfolio 2026</h3>
+                                <p class="card-text" data-fr="Le site actuel. Conçu avec Bootstrap 5, JavaScript vanilla, mode sombre/clair, animations CSS, bascule FR/EN et formulaire de contact intégré." data-en="This very site. Built with Bootstrap 5, vanilla JavaScript, dark/light mode, CSS animations, FR/EN toggle and integrated contact form.">
+                                    Le site actuel. Conçu avec Bootstrap 5, JavaScript vanilla, mode sombre/clair, animations CSS, bascule FR/EN et formulaire de contact intégré.
+                                </p>
+                                <div class="tech-tags mb-3">
+                                    <span class="tech-tag">Bootstrap 5</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">CSS3</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-neon" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-fr="Live — Vous y êtes ! ✨" data-en="Live — You're here! ✨">Live — Vous y êtes ! ✨</button>
+                                    <a href="https://github.com/amirreza-shafiei10/portfolio" target="_blank" class="btn btn-outline-dark" data-fr="Code GitHub 🐙" data-en="GitHub Code 🐙">Code GitHub 🐙</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== MINI PROJECTS ===== -->
+        <section id="mini-projets" class="bg-light py-5 reveal">
+            <div class="container">
+                <h3 class="text-center mb-5" data-fr="Mini Projets (Exercices Académiques)" data-en="Mini Projects (Academic Exercises)">Mini Projets (Exercices Académiques)</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 hover-card shadow-sm border-0">
+                            <img src="images/projet1.jpg" class="card-img-top" alt="Color Changer" loading="lazy">
+                            <div class="card-body">
+                                <h5 data-fr="Changeur de Couleur" data-en="Color Changer">Changeur de Couleur</h5>
+                                <p class="small text-muted">DOM &amp; Events</p>
+                                <button class="btn btn-sm btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalMini1" data-fr="Voir Info" data-en="View Info">Voir Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 hover-card shadow-sm border-0">
+                            <img src="images/projet2.jpg" class="card-img-top" alt="Click Counter" loading="lazy">
+                            <div class="card-body">
+                                <h5 data-fr="Compteur de Clics" data-en="Click Counter">Compteur de Clics</h5>
+                                <p class="small text-muted" data-fr="Logique JS" data-en="JS Logic">Logique JS</p>
+                                <button class="btn btn-sm btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalMini2" data-fr="Voir Info" data-en="View Info">Voir Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 hover-card shadow-sm border-0">
+                            <img src="images/projet3.jpg" class="card-img-top" alt="Profile Card" loading="lazy">
+                            <div class="card-body">
+                                <h5 data-fr="Carte Profil" data-en="Profile Card">Carte Profil</h5>
+                                <p class="small text-muted" data-fr="Intégration Bootstrap" data-en="Bootstrap Integration">Intégration Bootstrap</p>
+                                <button class="btn btn-sm btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalMini3" data-fr="Voir Info" data-en="View Info">Voir Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="apropos" class="container py-5 reveal">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4 fw-bold">
+                        <span class="text-gradient" data-fr="À propos de moi" data-en="About Me">À propos de moi</span>
+                    </h2>
+                    <p class="lead" data-fr="Étudiant L2 Informatique-DANT à Sorbonne Université, passionné par la création de produits réels avec des outils IA." data-en="L2 Computer Science student at Sorbonne Université, passionate about building real products with AI tools.">
+                        Étudiant L2 Informatique-DANT à Sorbonne Université, passionné par la création de produits réels avec des outils IA.
+                    </p>
+                    <p class="text-muted" data-fr="Je combine des bases académiques solides avec des projets concrets — des applications web complètes aux outils intégrant l'IA. Je recherche actuellement un stage où je pourrai contribuer, apprendre vite et construire des choses qui comptent." data-en="I combine academic foundations with hands-on projects — from full-stack web apps to AI-integrated tools. Currently seeking an internship where I can contribute, learn fast, and build things that matter.">
+                        Je combine des bases académiques solides avec des projets concrets — des applications web complètes aux outils intégrant l'IA. Je recherche actuellement un stage où je pourrai contribuer, apprendre vite et construire des choses qui comptent.
+                    </p>
+                    <ul class="list-inline mt-4 p-3 bg-light rounded-4 shadow-sm d-inline-block text-start">
+                        <li class="list-inline-item mx-3">
+                            <strong data-fr="🎓 Formation :" data-en="🎓 Education:">🎓 Formation :</strong>
+                            <span data-fr="Sorbonne Université" data-en="Sorbonne University">Sorbonne Université</span>
+                        </li>
+                        <li class="list-inline-item mx-3">
+                            <strong data-fr="💬 Langues :" data-en="💬 Languages:">💬 Langues :</strong>
+                            <span data-fr="Français, Anglais, Persan" data-en="French, English, Persian">Français, Anglais, Persan</span>
+                        </li>
+                        <li class="list-inline-item mx-3">
+                            <strong data-fr="🎯 Intérêts :" data-en="🎯 Interests:">🎯 Intérêts :</strong>
+                            <span>Tech, Sport, Design</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- EDUCATION TIMELINE -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <h4 class="text-center mb-4 fw-bold" data-fr="Parcours" data-en="Education Timeline">Parcours</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-year">2024 – <span data-fr="Présent" data-en="Present">Présent</span></span>
+                                <h5 class="fw-bold" data-fr="L2 Informatique-DANT" data-en="L2 Computer Science (DANT)">L2 Informatique-DANT</h5>
+                                <p class="text-muted mb-0" data-fr="Sorbonne Université, Paris" data-en="Sorbonne University, Paris">Sorbonne Université, Paris</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-year">2023 – 2024</span>
+                                <h5 class="fw-bold" data-fr="L1 Informatique" data-en="L1 Computer Science">L1 Informatique</h5>
+                                <p class="text-muted mb-0" data-fr="Sorbonne Université, Paris" data-en="Sorbonne University, Paris">Sorbonne Université, Paris</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-year">2023</span>
+                                <h5 class="fw-bold" data-fr="Baccalauréat" data-en="High School Diploma">Baccalauréat</h5>
+                                <p class="text-muted mb-0" data-fr="Mention obtenue" data-en="Diploma obtained">Mention obtenue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="competences" class="container py-5 reveal">
+            <h2 class="text-center mb-5 fw-bold" data-fr="Stack Technique" data-en="Technical Skills">Stack Technique</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="skill-group p-4 rounded-4 h-100">
+                        <h5 class="fw-bold mb-3" data-fr="Frontend" data-en="Frontend">Frontend</h5>
+                        <div class="skill-badges">
+                            <span class="skill-badge skill-badge-frontend">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="16" alt=""> HTML5
+                            </span>
+                            <span class="skill-badge skill-badge-frontend">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="16" alt=""> CSS3
+                            </span>
+                            <span class="skill-badge skill-badge-frontend">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="16" alt=""> JavaScript
+                            </span>
+                            <span class="skill-badge skill-badge-frontend">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="16" alt=""> Bootstrap
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-group p-4 rounded-4 h-100">
+                        <h5 class="fw-bold mb-3" data-fr="Langages" data-en="Languages">Langages</h5>
+                        <div class="skill-badges">
+                            <span class="skill-badge skill-badge-lang">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="16" alt=""> Python
+                            </span>
+                            <span class="skill-badge skill-badge-lang">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="16" alt=""> Java
+                            </span>
+                            <span class="skill-badge skill-badge-lang">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="16" alt=""> SQL
+                            </span>
+                            <span class="skill-badge skill-badge-lang">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="16" alt=""> C
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-group p-4 rounded-4 h-100">
+                        <h5 class="fw-bold mb-3" data-fr="Outils &amp; Autres" data-en="Tools &amp; Other">Outils &amp; Autres</h5>
+                        <div class="skill-badges">
+                            <span class="skill-badge skill-badge-tools">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="16" alt=""> Git &amp; GitHub
+                            </span>
+                            <span class="skill-badge skill-badge-tools">🔌 REST APIs</span>
+                            <span class="skill-badge skill-badge-tools">📱 <span data-fr="Responsive Design" data-en="Responsive Design">Responsive Design</span></span>
+                            <span class="skill-badge skill-badge-tools">🧩 DOM Manipulation</span>
+                            <span class="skill-badge skill-badge-tools">💾 LocalStorage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="container py-5 mb-5 reveal">
+            <div class="card border-0 shadow-lg overflow-hidden rounded-5">
+                <div class="row g-0">
+                    <div class="col-lg-5 bg-dark text-white p-5 d-flex flex-column justify-content-center align-items-center text-center">
+                        <h3 data-fr="Discutons !" data-en="Let's Talk!">Discutons !</h3>
+                        <p data-fr="N'hésitez pas à me contacter pour toute opportunité." data-en="Feel free to reach out for any opportunity.">N'hésitez pas à me contacter pour toute opportunité.</p>
+                        <div class="mt-4 d-grid gap-3 w-100">
+                            <a href="https://github.com/amirreza-shafiei10" target="_blank" class="btn btn-outline-light btn-lg">GitHub 🐙</a>
+                            <a href="https://www.linkedin.com/in/amir-reza-shafiei-675654396/" target="_blank" class="btn btn-outline-light btn-lg">LinkedIn 💼</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-5 bg-white">
+                        <h3 class="mb-4" data-fr="Envoyer un message" data-en="Send a message">Envoyer un message</h3>
+                        <div id="form-feedback" class="d-none mb-3"></div>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" name="name" class="form-control form-control-lg bg-light border-0" id="nom"
+                                       placeholder="Votre Nom"
+                                       data-placeholder-fr="Votre Nom"
+                                       data-placeholder-en="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" name="email" class="form-control form-control-lg bg-light border-0" id="email"
+                                       placeholder="Votre Email"
+                                       data-placeholder-fr="Votre Email"
+                                       data-placeholder-en="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control form-control-lg bg-light border-0" id="message" rows="4"
+                                          placeholder="Votre Message"
+                                          data-placeholder-fr="Votre Message"
+                                          data-placeholder-en="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="btn btn-neon w-100 btn-lg" data-fr="Envoyer le message" data-en="Send Message">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Amir Reza Shafiei. <span data-fr="Conçu avec ❤️ &amp; Bootstrap." data-en="Designed with ❤️ &amp; Bootstrap.">Conçu avec ❤️ &amp; Bootstrap.</span></p>
+        </div>
+    </footer>
+
+    <!-- ===== MODALS — MAIN PROJECTS ===== -->
+    <div class="modal fade" id="modalProjet1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-fr="Projet de cours 1 — HTML/CSS" data-en="Course Project 1 — HTML/CSS">Projet de cours 1 — HTML/CSS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tech-tags mb-3">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                    <p data-fr="Premier projet d'évaluation — site multipage avec structure sémantique, design responsive et menu hamburger mobile implémenté sans frameworks." data-en="First evaluation project — multipage site with semantic structure, responsive design, and a mobile hamburger menu implemented without any frameworks.">
+                        Premier projet d'évaluation — site multipage avec structure sémantique, design responsive et menu hamburger mobile implémenté sans frameworks.
+                    </p>
+                    <p class="text-muted small" data-fr="📅 Octobre 2025" data-en="📅 October 2025">📅 Octobre 2025</p>
+                    <hr>
+                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/main" target="_blank" class="btn btn-dark w-100" data-fr="Voir le code sur GitHub 🐙" data-en="View Code on GitHub 🐙">Voir le code sur GitHub 🐙</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProjet2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-fr="Projet de cours 2 — JavaScript" data-en="Course Project 2 — JavaScript">Projet de cours 2 — JavaScript</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tech-tags mb-3">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                    <p data-fr="Trois exercices interactifs démontrant les fondamentaux JavaScript : vérificateur d'années bissextiles, formulaire de contact orienté objet, et gestionnaire de liste avec LocalStorage." data-en="Three interactive exercises demonstrating JavaScript fundamentals: leap year validator, object-oriented contact form, and dynamic list manager with LocalStorage.">
+                        Trois exercices interactifs démontrant les fondamentaux JavaScript : vérificateur d'années bissextiles, formulaire de contact orienté objet, et gestionnaire de liste avec LocalStorage.
+                    </p>
+                    <p class="text-muted small" data-fr="📅 Décembre 2025" data-en="📅 December 2025">📅 Décembre 2025</p>
+                    <hr>
+                    <a href="https://github.com/amirreza-shafiei10/My-projects/blob/JAVASCRIPT-AMIRREZA-SHAFIEI" target="_blank" class="btn btn-dark w-100" data-fr="Voir le code sur GitHub 🐙" data-en="View Code on GitHub 🐙">Voir le code sur GitHub 🐙</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODALS — MINI PROJECTS ===== -->
+    <div class="modal fade" id="modalMini1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-fr="Changeur de Couleur" data-en="Color Changer">Changeur de Couleur</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tech-tags mb-3">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">DOM</span>
+                        <span class="tech-tag">Events</span>
+                    </div>
+                    <p data-fr="Exercice d'introduction à la manipulation du DOM et aux événements JavaScript. Change la couleur de fond de la page au clic." data-en="Introduction to DOM manipulation and JavaScript events. Changes the page background color on click.">
+                        Exercice d'introduction à la manipulation du DOM et aux événements JavaScript. Change la couleur de fond de la page au clic.
+                    </p>
+                    <p class="text-muted small">📅 2025</p>
+                    <hr>
+                    <a href="https://github.com/amirreza-shafiei10/Mes-Exercices-Web/blob/main/color.html/color.html" target="_blank" class="btn btn-dark w-100" data-fr="Voir le code sur GitHub 🐙" data-en="View Code on GitHub 🐙">Voir le code sur GitHub 🐙</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMini2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-fr="Compteur de Clics" data-en="Click Counter">Compteur de Clics</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tech-tags mb-3">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Variables</span>
+                        <span class="tech-tag">Logic</span>
+                    </div>
+                    <p data-fr="Compteur interactif avec incrémentation, décrémentation et remise à zéro. Exercice de base en logique JavaScript." data-en="Interactive counter with increment, decrement and reset logic. Basic JavaScript logic exercise.">
+                        Compteur interactif avec incrémentation, décrémentation et remise à zéro. Exercice de base en logique JavaScript.
+                    </p>
+                    <p class="text-muted small">📅 2025</p>
+                    <hr>
+                    <a href="https://github.com/amirreza-shafiei10/Mes-Exercices-Web/blob/main/counter.html/counter.html" target="_blank" class="btn btn-dark w-100" data-fr="Voir le code sur GitHub 🐙" data-en="View Code on GitHub 🐙">Voir le code sur GitHub 🐙</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMini3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-fr="Carte Profil" data-en="Profile Card">Carte Profil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tech-tags mb-3">
+                        <span class="tech-tag">Bootstrap 5</span>
+                        <span class="tech-tag">Grid</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                    <p data-fr="Mise en page de carte profil 100% responsive utilisant le système de grille Bootstrap 5. Exercice d'intégration de composants." data-en="100% responsive profile card layout using the Bootstrap 5 grid system. Component integration exercise.">
+                        Mise en page de carte profil 100% responsive utilisant le système de grille Bootstrap 5. Exercice d'intégration de composants.
+                    </p>
+                    <p class="text-muted small" data-fr="📅 Septembre 2025" data-en="📅 September 2025">📅 Septembre 2025</p>
+                    <hr>
+                    <a href="https://github.com/amirreza-shafiei10/Mes-Exercices-Web/blob/main/cv_card.html/cv_card.html" target="_blank" class="btn btn-dark w-100" data-fr="Voir le code sur GitHub 🐙" data-en="View Code on GitHub 🐙">Voir le code sur GitHub 🐙</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
